@@ -17,8 +17,12 @@ document.querySelector(".new-quote").addEventListener("click", showRandomQuote);
 
 const copyEl = document.querySelector(".copy-quote");
 copyEl.addEventListener("click", async () => {
-  await navigator.clipboard.writeText(quoteEl.textContent);
-  copyEl.textContent = "Copied!";
+  try {
+    await navigator.clipboard.writeText(quoteEl.textContent);
+    copyEl.textContent = "Copied!";
+  } catch {
+    copyEl.textContent = "Copy failed";
+  }
   setTimeout(() => (copyEl.textContent = "Copy"), 1500);
 });
 
