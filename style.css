@@ -1,4 +1,11 @@
 :root {
+  --bg: #f1f5f9;
+  --card: #ffffff;
+  --text: #0f172a;
+  --muted: #64748b;
+}
+
+body.dark {
   --bg: #0f172a;
   --card: #1e293b;
   --text: #f1f5f9;
@@ -36,8 +43,8 @@ body {
   line-height: 1.5;
 }
 
-.new-quote {
-  margin-top: 1.75rem;
+.new-quote,
+.theme-toggle {
   padding: 0.65rem 1.4rem;
   font: inherit;
   font-size: 1rem;
@@ -48,7 +55,18 @@ body {
   cursor: pointer;
 }
 
-.new-quote:hover {
+.new-quote {
+  margin-top: 1.75rem;
+}
+
+.theme-toggle {
+  float: right;
+  padding: 0.4rem 0.9rem;
+  font-size: 0.85rem;
+}
+
+.new-quote:hover,
+.theme-toggle:hover {
   background: var(--muted);
   color: var(--card);
 }
