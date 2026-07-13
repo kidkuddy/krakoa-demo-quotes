@@ -14,4 +14,11 @@ function showRandomQuote() {
 }
 
 document.querySelector(".new-quote").addEventListener("click", showRandomQuote);
+
+const toggleEl = document.querySelector(".theme-toggle");
+toggleEl.addEventListener("click", () => {
+  const dark = document.body.classList.toggle("dark");
+  toggleEl.textContent = dark ? "Light mode" : "Dark mode";
+});
+
 showRandomQuote();
