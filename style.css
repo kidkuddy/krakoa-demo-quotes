@@ -44,6 +44,7 @@ body {
 }
 
 .new-quote,
+.copy-quote,
 .theme-toggle {
   padding: 0.65rem 1.4rem;
   font: inherit;
@@ -55,8 +56,13 @@ body {
   cursor: pointer;
 }
 
-.new-quote {
+.new-quote,
+.copy-quote {
   margin-top: 1.75rem;
+}
+
+.copy-quote {
+  margin-left: 0.5rem;
 }
 
 .theme-toggle {
@@ -66,6 +72,7 @@ body {
 }
 
 .new-quote:hover,
+.copy-quote:hover,
 .theme-toggle:hover {
   background: var(--muted);
   color: var(--card);

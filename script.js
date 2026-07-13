@@ -15,6 +15,13 @@ function showRandomQuote() {
 
 document.querySelector(".new-quote").addEventListener("click", showRandomQuote);
 
+const copyEl = document.querySelector(".copy-quote");
+copyEl.addEventListener("click", async () => {
+  await navigator.clipboard.writeText(quoteEl.textContent);
+  copyEl.textContent = "Copied!";
+  setTimeout(() => (copyEl.textContent = "Copy"), 1500);
+});
+
 const toggleEl = document.querySelector(".theme-toggle");
 toggleEl.addEventListener("click", () => {
   const dark = document.body.classList.toggle("dark");
