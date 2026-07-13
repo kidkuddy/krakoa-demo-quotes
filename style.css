@@ -36,9 +36,19 @@ body {
   line-height: 1.5;
 }
 
-.author {
-  margin-top: 1.25rem;
+.new-quote {
+  margin-top: 1.75rem;
+  padding: 0.65rem 1.4rem;
+  font: inherit;
   font-size: 1rem;
-  font-style: italic;
-  color: var(--muted);
+  color: var(--text);
+  background: transparent;
+  border: 1px solid var(--muted);
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.new-quote:hover {
+  background: var(--muted);
+  color: var(--card);
 }
