@@ -13,7 +13,14 @@ function showRandomQuote() {
   quoteEl.textContent = quotes[i];
 }
 
-document.querySelector(".new-quote").addEventListener("click", showRandomQuote);
+let newQuoteCount = 0;
+const countEl = document.querySelector(".visit-count");
+
+document.querySelector(".new-quote").addEventListener("click", () => {
+  showRandomQuote();
+  newQuoteCount += 1;
+  countEl.textContent = `New quotes this visit: ${newQuoteCount}`;
+});
 
 const copyEl = document.querySelector(".copy-quote");
 copyEl.addEventListener("click", async () => {
